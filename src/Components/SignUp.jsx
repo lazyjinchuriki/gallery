@@ -16,7 +16,7 @@ const SignUp = () => {
       password: password,
       user_metadata: { name: name },
     });
-    navigate("/");
+    navigate("/gallery/");
     if (error) {
       alert(error.message);
       console.log(error);
