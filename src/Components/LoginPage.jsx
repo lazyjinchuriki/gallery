@@ -96,7 +96,7 @@ const LoginPage = () => {
               />
               <p>
                 Don&apos;t have an account,{" "}
-                <Link to={"gallery/signuppage/"}>
+                <Link to={"/signuppage/"}>
                   <b>
                     <u>SIGN UP</u>
                   </b>
