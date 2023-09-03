@@ -61,7 +61,7 @@ const SignUp = () => {
               />
               <p>
                 Already have an account,{" "}
-                <Link to={"/"}>
+                <Link to={"gallery"}>
                   <b>
                     <u>LOG IN</u>
                   </b>
