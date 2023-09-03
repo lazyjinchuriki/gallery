@@ -44,6 +44,12 @@ jobs:
           name: production-files
           path: ./dist
 
+      - name: Set up environment variables
+        run: |
+          echo "VITE_Project_URL=https://chjdddjpezbmgdjbfigk.supabase.co" >> $GITHUB_ENV
+          echo "VITE_Public_Key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNoamRkZGpwZXpibWdkamJmaWdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTI2MjYxNTIsImV4cCI6MjAwODIwMjE1Mn0.lEgRcaaJ5a9EkFZpaSNzrelXt3A4odgV3-SXxFC-ZrE" >> $GITHUB_ENV
+          echo "VITE_CDN_URL=https://chjdddjpezbmgdjbfigk.supabase.co/storage/v1/object/public/images/" >> $GITHUB_ENV
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
