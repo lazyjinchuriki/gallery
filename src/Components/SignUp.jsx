@@ -60,12 +60,10 @@ const SignUp = () => {
                 onChange={(e) => setName(e.target.value)}
               />
               <p>
-                Already have an account,{" "}
-                <Link to={"gallery"}>
-                  <b>
-                    <u>LOG IN</u>
-                  </b>
-                </Link>
+              Already have an account,{" "}
+              <b>
+              <u onClick={() => navigate("/gallery/")}>LOG IN</u>
+              </b>
               </p>
               <button
                 className="bg-black mt-2 text-white font-bold py-2 px-4 rounded-lg shadow-lg w-full"
