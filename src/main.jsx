@@ -10,8 +10,8 @@ import SignUp from "./Components/SignUp.jsx";
 import GalleryPage from "./Components/Gallery.jsx";
 
 const supabase = createClient(
-  import.meta.env.VITE_Project_URL,
-  import.meta.env.VITE_Public_Key
+  "https://chjdddjpezbmgdjbfigk.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNoamRkZGpwZXpibWdkamJmaWdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTI2MjYxNTIsImV4cCI6MjAwODIwMjE1Mn0.lEgRcaaJ5a9EkFZpaSNzrelXt3A4odgV3-SXxFC-ZrE"
 );
 
 const router = createBrowserRouter([

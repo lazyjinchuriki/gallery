@@ -4,7 +4,8 @@ import { v4 as uuidv4 } from "uuid";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const cdnUrl = import.meta.env.VITE_CDN_URL;
+const cdnUrl =
+  "https://chjdddjpezbmgdjbfigk.supabase.co/storage/v1/object/public/images/";
 
 const GalleryPage = () => {
   const user = useUser();
