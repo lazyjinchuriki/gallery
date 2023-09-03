@@ -16,7 +16,7 @@ const SignUp = () => {
       password: password,
       user_metadata: { name: name },
     });
-    navigate("/gallery/");
+    navigate(-1);
     if (error) {
       alert(error.message);
       console.log(error);
@@ -62,7 +62,7 @@ const SignUp = () => {
               <p>
               Already have an account,{" "}
               <b>
-              <u onClick={() => navigate("/gallery/")}>LOG IN</u>
+              <u onClick={() => navigate(-1)}>LOG IN</u>
               </b>
               </p>
               <button
