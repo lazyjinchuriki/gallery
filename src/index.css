@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.fileInput {
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  font-size: 1em;
+}
+input[type="file"] {
+    border: 2px solid #000;
+    margin-bottom: 20px;
+    font-size: 1em;
+  
+}
+
+::-webkit-file-upload-button {
+  color: white;
+  background-color: black !important;
+  border: none !important;
+  padding: 7px 10px !important;
+  border-radius: 10px !important;
+}
