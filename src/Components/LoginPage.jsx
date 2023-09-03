@@ -16,9 +16,6 @@ const LoginPage = () => {
     e.preventDefault();
     const { data, error } = await supabase.auth.signInWithOtp({
       email: email,
-      options: {
-        emailRedirectTo: "https://example.com/welcome",
-      },
     });
 
     if (error) {
