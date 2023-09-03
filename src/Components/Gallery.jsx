@@ -20,7 +20,7 @@ const GalleryPage = () => {
 
   const signout = async () => {
     const { error } = await supabase.auth.signOut();
-    navigate("/");
+    navigate("/gallery/");
     if (error) {
       alert(error.message);
       console.log(error);

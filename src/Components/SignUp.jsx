@@ -61,7 +61,7 @@ const SignUp = () => {
               />
               <p>
                 Already have an account,{" "}
-                <Link to={"/"}>
+                <Link to={"/gallery/"}>
                   <b>
                     <u>LOG IN</u>
                   </b>
@@ -70,7 +70,9 @@ const SignUp = () => {
               <button
                 className="bg-black mt-2 text-white font-bold py-2 px-4 rounded-lg shadow-lg w-full"
                 type="submit"
-                {...(user && { onClick: () => navigate("/gallerypage") })}
+                {...(user && {
+                  onClick: () => navigate("/gallery/gallerypage"),
+                })}
               >
                 Submit
               </button>

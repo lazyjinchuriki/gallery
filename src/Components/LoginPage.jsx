@@ -10,7 +10,7 @@ const LoginPage = () => {
   const supabase = useSupabaseClient();
 
   if (user) {
-    navigate("/gallerypage");
+    navigate("/gallery/gallerypage/");
   }
   const getMagicLink = async (e) => {
     e.preventDefault();
@@ -28,7 +28,7 @@ const LoginPage = () => {
     } else {
       alert("Check your email for the magic link!");
       {
-        user && navigate("/gallerypage");
+        user && navigate("/gallery/gallerypage/");
       }
       console.log(data);
       return;
@@ -37,7 +37,7 @@ const LoginPage = () => {
   const loginWithPass = async (e) => {
     e.preventDefault();
     {
-      user && navigate("/gallerypage");
+      user && navigate("/gallery/gallerypage/");
     }
     const { error } = await supabase.auth.signInWithPassword({
       email: email,
@@ -96,7 +96,7 @@ const LoginPage = () => {
               />
               <p>
                 Don&apos;t have an account,{" "}
-                <Link to={"signuppage"}>
+                <Link to={"gallery/signuppage/"}>
                   <b>
                     <u>SIGN UP</u>
                   </b>
