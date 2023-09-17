@@ -4,8 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const cdnUrl =
-  "https://chjdddjpezbmgdjbfigk.supabase.co/storage/v1/object/public/images/";
+const cdnUrl = import.meta.env.VITE_CDN_URL;
 
 const GalleryPage = () => {
   const user = useUser();
@@ -20,7 +19,7 @@ const GalleryPage = () => {
 
   const signout = async () => {
     const { error } = await supabase.auth.signOut();
-    navigate("/gallery/");
+    navigate("/");
     if (error) {
       alert(error.message);
       console.log(error);

@@ -16,7 +16,7 @@ const SignUp = () => {
       password: password,
       user_metadata: { name: name },
     });
-    navigate(-1);
+    navigate("/");
     if (error) {
       alert(error.message);
       console.log(error);
@@ -60,17 +60,17 @@ const SignUp = () => {
                 onChange={(e) => setName(e.target.value)}
               />
               <p>
-              Already have an account,{" "}
-              <b>
-              <u onClick={() => navigate(-1)}>LOG IN</u>
-              </b>
+                Already have an account,{" "}
+                <Link to={"/"}>
+                  <b>
+                    <u>LOG IN</u>
+                  </b>
+                </Link>
               </p>
               <button
                 className="bg-black mt-2 text-white font-bold py-2 px-4 rounded-lg shadow-lg w-full"
                 type="submit"
-                {...(user && {
-                  onClick: () => navigate("/gallery/gallerypage"),
-                })}
+                {...(user && { onClick: () => navigate("/gallerypage") })}
               >
                 Submit
               </button>

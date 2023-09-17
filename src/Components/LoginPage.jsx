@@ -10,12 +10,16 @@ const LoginPage = () => {
   const supabase = useSupabaseClient();
 
   if (user) {
-    navigate("/gallery/gallerypage/");
+    navigate("/gallerypage");
   }
+
   const getMagicLink = async (e) => {
     e.preventDefault();
     const { data, error } = await supabase.auth.signInWithOtp({
       email: email,
+      options: {
+        emailRedirectTo: "https://lazyjinchuriki.github.io/gallery",
+      },
     });
 
     if (error) {
@@ -25,7 +29,7 @@ const LoginPage = () => {
     } else {
       alert("Check your email for the magic link!");
       {
-        user && navigate("/gallery/gallerypage/");
+        user && navigate("/gallerypage");
       }
       console.log(data);
       return;
@@ -34,7 +38,7 @@ const LoginPage = () => {
   const loginWithPass = async (e) => {
     e.preventDefault();
     {
-      user && navigate("/gallery/gallerypage/");
+      user && navigate("/gallerypage");
     }
     const { error } = await supabase.auth.signInWithPassword({
       email: email,
@@ -56,7 +60,7 @@ const LoginPage = () => {
               onSubmit={getMagicLink}
               className="flex flex-col items-center justify-center gap-2 "
             >
-              <h3 className="text-xl font-bold mb-2">Login with Redirect</h3>
+              <h3 className="text-xl font-bold mb-2">Login with OTP</h3>
               <input
                 type="email"
                 className="py-2 mb-2 px-4 bg-transparent border-b-2 border-black placeholder-black placeholder-opacity-70 focus:outline-none focus:scale-105 transition transform duration-100 ease-in-out w-full"
