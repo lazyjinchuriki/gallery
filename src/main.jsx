@@ -13,7 +13,9 @@ const supabase = createClient(
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <SessionContextProvider supabaseClient={supabase}>
-      <BrowserRouter>
+      <BrowserRouter
+basename={import.meta.env.DEV ? '/' : '/gallery/'}
+>
         <App />
       </BrowserRouter>
     </SessionContextProvider>
